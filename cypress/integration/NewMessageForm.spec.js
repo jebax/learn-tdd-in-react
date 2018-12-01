@@ -2,10 +2,10 @@ import React from 'react';
 import { mount } from 'cypress-react-unit-test';
 import NewMessageForm from '../../src/NewMessageForm';
 
-describe('<NewMessagForm />', () => {
+describe('<NewMessageForm />', () => {
   describe('clicking the send button', () => {
     beforeEach(() => {
-      mount(<NewMessageForm />)
+      mount(<NewMessageForm/>)
 
       cy.get('[data-test="messageText"]')
         .type('New Message')
