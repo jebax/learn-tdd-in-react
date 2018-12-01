@@ -4,6 +4,11 @@ export default class NewMessageForm extends Component {
   state = { inputText: '' }
 
   handleSend = () => {
+    const { inputText } = this.state
+    const { onSend } = this.props
+
+    onSend(inputText)
+    
     this.setState({ inputText: '' })
   }
 
